@@ -23,7 +23,7 @@ export default function GlobalHeader() {
         return;
       }
 
-      setUserName(session.tokens?.idToken?.payload?.email ?? "");
+      setUserName(session.tokens?.idToken?.payload?.email?.toString() ?? "");
     })();
   }, []);
 
