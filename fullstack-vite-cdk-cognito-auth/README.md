@@ -26,6 +26,13 @@ We recommend deploying with [AWS Cloud9](https://aws.amazon.com/cloud9/).
 If you'd like to use Cloud9 to deploy the solution, you will need the following before proceeding:
 - use `Amazon Linux 2023` as the platform.
 
+The default EBS volume create with the Cloud9 instance is too small and you need to increase it to at least 25GB. To do this, run the following command from the Cloud9 terminal:
+
+```bash
+./scripts/cloud9-resize.sh
+```
+
+
 #### Deploy with Github Codespaces
 If you'd like to use [GitHub Codespaces](https://github.com/features/codespaces) to deploy the solution, you will need the following before proceeding:
 1. An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
