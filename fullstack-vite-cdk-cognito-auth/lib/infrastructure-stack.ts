@@ -271,7 +271,7 @@ export class InfrastructureStack extends cdk.Stack {
                 },
               };
 
-              execSync(`npm --silent --prefix "${appPath}" ci`, options);
+              execSync(`npm --silent --prefix "${appPath}" install`, options);
               execSync(`npm --silent --prefix "${appPath}" run build`, options);
               Utils.copyDirRecursive(buildPath, outputDir);
             } catch (e) {
