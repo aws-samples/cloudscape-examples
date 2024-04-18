@@ -59,8 +59,8 @@ if [[ -n ${SIZE//[0-9]/} ]]; then
 fi
 
 # Ensure the new size is superior or equal to 100 GB.
-if [ "$SIZE" -lt "100" ]; then
-  echo "The new size must be superior or equal to 100 GiB."
+if [ "$SIZE" -lt "25" ]; then
+  echo "The new size must be superior or equal to 25 GiB."
   exit 1
 fi
 
