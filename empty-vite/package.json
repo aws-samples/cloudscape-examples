@@ -11,9 +11,9 @@
     "format": "npx prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|ts|json)\""
   },
   "dependencies": {
-    "@cloudscape-design/components": "^3.0.521",
-    "@cloudscape-design/design-tokens": "^3.0.34",
-    "@cloudscape-design/global-styles": "^1.0.23",
+    "@cloudscape-design/components": "^3.0.611",
+    "@cloudscape-design/design-tokens": "^3.0.35",
+    "@cloudscape-design/global-styles": "^1.0.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0"
@@ -31,7 +31,7 @@
     "postcss": "^8.4.35",
     "sass": "^1.70.0",
     "typescript": "^5.2.2",
-    "vite": "^5.1.0"
+    "vite": "^5.2.9"
   },
   "overrides": {
     "react-virtual": {

@@ -24,7 +24,7 @@ Vite.js is a modern, fast front-end build tool that significantly improves the d
 #### Deploy with AWS Cloud9
 We recommend deploying with [AWS Cloud9](https://aws.amazon.com/cloud9/). 
 If you'd like to use Cloud9 to deploy the solution, you will need the following before proceeding:
-- use `Ubuntu Server 22.04 LTS` as the platform.
+- use `Amazon Linux 2023` as the platform.
 
 #### Deploy with Github Codespaces
 If you'd like to use [GitHub Codespaces](https://github.com/features/codespaces) to deploy the solution, you will need the following before proceeding:
