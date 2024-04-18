@@ -18,6 +18,8 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as lambdaPython from "@aws-cdk/aws-lambda-python-alpha";
 import * as logs from "aws-cdk-lib/aws-logs";
 
+const lambdaArchitecture = lambda.Architecture.X86_64;
+
 export class InfrastructureStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -69,8 +71,7 @@ export class InfrastructureStack extends cdk.Stack {
     const originAccessIdentity = new cf.OriginAccessIdentity(this, "S3OAI");
     websiteBucket.grantRead(originAccessIdentity);
 
-    const lambdaArchitecture = lambda.Architecture.ARM_64;
-    const powerToolsLayerVersion = "61";
+    const powerToolsLayerVersion = "68";
     const powerToolsLayer = lambda.LayerVersion.fromLayerVersionArn(
       this,
       "PowertoolsLayer",
