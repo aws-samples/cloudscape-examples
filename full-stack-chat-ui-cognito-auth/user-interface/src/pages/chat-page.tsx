@@ -18,16 +18,20 @@ export default function ChatPage() {
 
     const apiClient = new ApiClient();
     const result = await apiClient.chatClient.chat(message);
-    console.log(result);
 
     setMessages((prevMessages) => [
       ...prevMessages.slice(0, prevMessages.length - 1), // Copy all but the last item
       {
-        ...prevMessages[prevMessages.length - 1], // Copy the last item
-        message: result.response
-      }
+        type: ChatMessageType.AI,
+        content: result.response.message,
+      },
     ]);
+    setRunning(false);
   };
+
+  const onSendFeedback = (feedback: any, message: ChatMessage) => {
+    console.log(feedback, message);
+  }
 
   return (
     <BaseAppLayout
@@ -36,6 +40,7 @@ export default function ChatPage() {
           onSendMessage={sendMessage}
           messages={messages}
           running={running}
+          onSendFeedback={onSendFeedback}
         />
       }
     />

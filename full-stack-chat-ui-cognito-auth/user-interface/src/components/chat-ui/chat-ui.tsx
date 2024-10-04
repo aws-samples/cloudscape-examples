@@ -1,9 +1,9 @@
-import { StatusIndicator } from "@cloudscape-design/components";
+import { SpaceBetween, StatusIndicator } from "@cloudscape-design/components";
 import { ChatMessage } from "./types";
 import ChatUIInputPanel from "./chat-ui-input-panel";
-import { useEffect } from "react";
-import ChatUIMessageList from "./chat-ui-message-list";
+import ChatUIMessage from "./chat-ui-message";
 import styles from "../../styles/chat-ui.module.scss";
+import { useEffect } from "react";
 
 export interface ChatUIProps {
   loading?: boolean;
@@ -12,8 +12,8 @@ export interface ChatUIProps {
   welcomeText?: string;
   inputPlaceholderText?: string;
   sendButtonText?: string;
-  showCopyButton?: boolean;
   onSendMessage?: (message: string) => void;
+  onSendFeedback?: (feedback: string, message: ChatMessage) => void;
 }
 
 export abstract class ChatScrollState {
@@ -23,6 +23,8 @@ export abstract class ChatScrollState {
 }
 
 export function ChatUI(props: ChatUIProps) {
+  const messages = props.messages || [];
+
   useEffect(() => {
     const onWindowScroll = () => {
       if (ChatScrollState.skipNextScrollEvent) {
@@ -53,13 +55,20 @@ export function ChatUI(props: ChatUIProps) {
 
   return (
     <div className={styles.chat_container}>
-      <ChatUIMessageList
-        messages={props.messages}
-        showCopyButton={props.showCopyButton}
-      />
+      <SpaceBetween direction="vertical" size="m">
+        {messages.map((message, idx) => {
+          return (
+            <ChatUIMessage
+              key={idx}
+              message={message}
+              onSendFeedback={props.onSendFeedback}
+            />
+          );
+        })}
+      </SpaceBetween>
       <div className={styles.welcome_text}>
-        {props.messages?.length === 0 && !props.loading && (
-          <center>{props.welcomeText ?? "ChatBot"}</center>
+        {messages.length == 0 && !props.loading && (
+          <center>{props.welcomeText ?? "Melia Chat Bot demo app"}</center>
         )}
         {props.loading && (
           <center>
