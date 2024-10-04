@@ -68,7 +68,7 @@ export function ChatUI(props: ChatUIProps) {
       </SpaceBetween>
       <div className={styles.welcome_text}>
         {messages.length == 0 && !props.loading && (
-          <center>{props.welcomeText ?? "Melia Chat Bot demo app"}</center>
+          <center>{props.welcomeText ?? "Chat Bot demo app"}</center>
         )}
         {props.loading && (
           <center>
