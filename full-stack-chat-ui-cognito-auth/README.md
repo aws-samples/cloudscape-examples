@@ -1,22 +1,24 @@
-# Fullstack Cloudscape App with CDK and Cognito Auth
+# Fullstack Cloudscape Chat App with CDK and Cognito Auth
 
 [https://cloudscape.design/](https://cloudscape.design/)
 
 Cloudscape is an open source design system for the cloud. Cloudscape offers user interface guidelines, front-end components, design resources, and development tools for building intuitive, engaging, and inclusive user experiences at scale.
 
 
-![sample](../assets/fullstack-vite-cdk-cognito-auth-01.png "Screenshot")
-![sample](../assets/fullstack-vite-cdk-cognito-auth-02.png "Screenshot")
+![sample](../assets/full-stack-chat-ui-cognito-auth-01.png "Screenshot")
+![sample](../assets/full-stack-chat-ui-cognito-auth-02.png "Screenshot")
+![sample](../assets/full-stack-chat-ui-cognito-auth-03.png "Screenshot")
+![sample](../assets/full-stack-chat-ui-cognito-auth-04.png "Screenshot")
 
 # Architecture
 
-![sample](../assets/fullstack-vite-cdk-cognito-auth-architecture.png "Architecture Diagram")
+![sample](../assets/fullstack-chat-ui-cognito-auth-architecture.png "Architecture Diagram")
 
 ## Vite.js
 
 [https://vitejs.dev/](https://vitejs.dev/)
 
-Vite.js is a modern, fast front-end build tool that significantly improves the developer experience when building web applications. 
+Vite.js is a modern, fast front-end build tool that significantly improves the developer experience when building web applications.
 
 # Deploy
 ### Environment setup
@@ -74,7 +76,7 @@ git clone https://github.com/aws-samples/cloudscape-examples
 ```
 2. Move into the cloned repository
 ```bash
-cd cloudscape-examples/fullstack-vite-cdk-cognito-auth
+cd cloudscape-examples/full-stack-chat-ui-cognito-auth
 ```
 
 <a id="deployment-dependencies-installation"></a>
@@ -103,7 +105,7 @@ You can view the progress of your CDK deployment in the [CloudFormation console]
 ```bash
 ...
 Outputs:
-InfrastructureStack.UserInterfaceDomainName = https://dxxxxxxxxxxxxx.cloudfront.net
+ChatUiInfrastructureStack.UserInterfaceDomainName = https://dxxxxxxxxxxxxx.cloudfront.net
 ...
 ```
 
@@ -119,7 +121,7 @@ https://dxxxxxxxxxxxxx.cloudfront.net/aws-exports.json
 ```
 ![sample](../assets/aws-exports.png "aws-exports.json")
 
-Save ``aws-exports.json`` file to `fullstack-vite-cdk-cognito-auth/user-interface/public` folder. 
+Save ``aws-exports.json`` file to `full-stack-chat-ui-cognito-auth/user-interface/public` folder.
 
 ### Run the App with backend access
 
