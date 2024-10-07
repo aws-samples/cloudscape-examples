@@ -3,7 +3,7 @@ import { ChatMessage } from "./types";
 import ChatUIInputPanel from "./chat-ui-input-panel";
 import ChatUIMessage from "./chat-ui-message";
 import styles from "../../styles/chat-ui.module.scss";
-import { useEffect } from "react";
+import { ReactElement, useEffect } from "react";
 
 export interface ChatUIProps {
   loading?: boolean;
@@ -12,6 +12,7 @@ export interface ChatUIProps {
   welcomeText?: string;
   inputPlaceholderText?: string;
   sendButtonText?: string;
+  renderExpandableContent?:(message:ChatMessage) => ReactElement | undefined;
   onSendMessage?: (message: string) => void;
   onSendFeedback?: (feedback: string, message: ChatMessage) => void;
 }
@@ -62,6 +63,7 @@ export function ChatUI(props: ChatUIProps) {
               key={idx}
               message={message}
               onSendFeedback={props.onSendFeedback}
+              renderExpandableContent={props.renderExpandableContent}
             />
           );
         })}

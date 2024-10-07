@@ -3,10 +3,11 @@ import ReactMarkdown from "react-markdown";
 import { ChatMessage, ChatMessageType } from "./types";
 import styles from "../../styles/chat-ui.module.scss";
 import { BaseChatMessage } from "./BaseChatMessage";
-import React from "react";
+import React, { ReactElement } from "react";
 
 export interface ChatUIMessageProps {
   readonly message: ChatMessage;
+  readonly renderExpandableContent?:(message:ChatMessage) => ReactElement | undefined;
   readonly onSendFeedback?: (feedback: any, message: ChatMessage) => void;
 
 }
@@ -26,6 +27,7 @@ export default function ChatUIMessage(props: ChatUIMessageProps) {
           }
         : undefined
       }
+      expandableContent={props.renderExpandableContent?.(props.message)}
       waiting={props.message.content.length === 0}
       name={props.message?.type === ChatMessageType.AI ? "Ai" : "User"}
     >

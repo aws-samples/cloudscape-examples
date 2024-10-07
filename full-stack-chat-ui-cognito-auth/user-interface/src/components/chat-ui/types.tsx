@@ -6,4 +6,5 @@ export enum ChatMessageType {
 export interface ChatMessage {
   type: ChatMessageType;
   content: string;
+  metadata?: any;
 }

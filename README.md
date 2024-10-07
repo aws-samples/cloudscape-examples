@@ -8,6 +8,7 @@ This repository provides ready-to-use examples of Cloudscape React projects.
 
 ![sample](assets/basic-vite.png "Cloudscape")
 ![sample](assets/chat-ui-vite.png "ChatUI")
+![sample](assets/full-stack-chat-ui-cognito-auth-04.png "ChatBotUI")
 
 
 # Examples
@@ -18,6 +19,7 @@ This repository provides ready-to-use examples of Cloudscape React projects.
 |[Basic Cloudscape app](basic-vite) | Cloudscape example built with React Router and Vite, featuring a dashboard page, a table page, details page, and an add page.|
 |[Fullstack Cloudscape app with CDK and Cognito auth](fullstack-vite-cdk-cognito-auth) | Cloudscape fullstack example built with React Router and Vite, featuring a dashboard page, a table page, details page, and an add page. It is deployable with AWS CDK (Cloud Development Kit). The example deploys the frontend as a static website to an S3 bucket and serves it with Amazon CloudFront. It utilizes Amazon Cognito for authentication and Amplify UI for React for the login user interface. Data is stored in Amazon DynamoDB. The REST API is implemented with Amazon API Gateway and AWS Lambda and uses Powertools for AWS Lambda.|
 | [Chat UI for Cloudscape](chat-ui-vite) | Cloudscape example featuring a Chat UI, with a message input field and a list of messages.|
+|[Fullstack Chat UI app with CDK and Cognito auth](full-stack-chat-ui-cognito-auth) | Cloudscape fullstack Chat UI example built with React Router and Vite, featuring a chat bot page. It is deployable with AWS CDK (Cloud Development Kit). The example deploys the frontend as a static website to an S3 bucket and serves it with Amazon CloudFront. It utilizes Amazon Cognito for authentication and Amplify UI for React for the login user interface. The REST API is implemented with Amazon API Gateway and AWS Lambda and uses Powertools for AWS Lambda.|
 
 
 # License
