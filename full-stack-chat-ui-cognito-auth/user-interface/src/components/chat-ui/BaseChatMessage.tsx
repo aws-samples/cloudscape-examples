@@ -6,7 +6,7 @@ import {
 import { ReactElement, useState } from "react";
 import styles from "../../styles/chat-ui.module.scss";
 import { CopyWithPopoverButton } from "./CopyButton";
-import { Avatar } from "./Avatar";
+import Avatar from "@cloudscape-design/chat-components/avatar";
 import * as awsui from "@cloudscape-design/design-tokens";
 
 export function BaseChatMessage(props: {
@@ -31,10 +31,11 @@ export function BaseChatMessage(props: {
       }}
     >
       <Avatar
-        name={props.name}
-        content={props.avatarElement}
-        waiting={props.waiting}
-        role={props.role}
+        ariaLabel={props.name || props.role}
+        tooltipText={props.name || props.role}
+        color={props.role === 'ai' ? "gen-ai" : 'default'}
+        loading={props.waiting}
+        iconName={props.role === 'ai' ? 'gen-ai':'user-profile'}
       />
       {props.children && (
         <div
