@@ -37,7 +37,7 @@ export default function NavigationPanel() {
       {
         type: "link",
         text: "Documentation",
-        href: "https://gitlab.aws.dev/aws-emea-prototyping/modern-application-development/user-experience-frontend/cloudscape",
+        href: "https://github.com/aws-samples/cloudscape-examples",
         external: true,
       }
     );
