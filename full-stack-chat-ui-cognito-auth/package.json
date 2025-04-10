@@ -25,7 +25,7 @@
     "@aws-cdk/aws-cognito-identitypool-alpha": "^2.137.0-alpha.0",
     "@aws-cdk/aws-lambda-python-alpha": "^2.137.0-alpha.0",
     "@cloudscape-design/design-tokens": "^3.0.34",
-    "aws-cdk-lib": "2.137.0",
+    "aws-cdk-lib": "2.189.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
   }
